@@ -26,6 +26,11 @@ namespace Assets.Scripts.Weapons
         
         void OnCollisionEnter(Collision collision)
         {
+            if (collision.collider.tag == "Player")
+            {
+                return;
+            }
+
             var foe = collision.gameObject.GetComponent<Foe>();
             if (foe != null)
             {
