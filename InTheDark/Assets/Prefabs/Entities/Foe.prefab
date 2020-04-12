@@ -477,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 374dc32dbd725ab42a44382e29c855cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitMaterial: {fileID: 2100000, guid: 665bc078ffac1354b926dfacea1e5651, type: 2}
   maxHealth: 20
 --- !u!54 &3961410116952852856
 Rigidbody:
