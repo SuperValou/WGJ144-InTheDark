@@ -363,12 +363,16 @@ namespace Assets.Scripts.NavMeshComponents.Scripts
                 return false;
 
             // Prefab parent owns the asset reference
+#pragma warning disable CS0618 // Type or member is obsolete
             var prefabType = UnityEditor.PrefabUtility.GetPrefabType(this);
             if (prefabType == UnityEditor.PrefabType.Prefab)
+#pragma warning restore CS0618 // Type or member is obsolete
                 return false;
 
             // An instance can share asset reference only with its prefab parent
+#pragma warning disable CS0618 // Type or member is obsolete
             var prefab = UnityEditor.PrefabUtility.GetPrefabParent(this) as NavMeshSurface;
+#pragma warning restore CS0618 // Type or member is obsolete
             if (prefab != null && prefab.navMeshData == navMeshData)
                 return false;
 

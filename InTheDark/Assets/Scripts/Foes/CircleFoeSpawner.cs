@@ -7,7 +7,7 @@ namespace Assets.Scripts.Foes
     public class CircleFoeSpawner : MonoBehaviour
     {
         public Foe foePrefab;
-        public float spawnPerSecond = 0.3f;
+        public float spawnEvery = 0.3f;
         public float circleRadius = 20;
         public int initialBurstSpawn = 3;
 
@@ -18,9 +18,9 @@ namespace Assets.Scripts.Foes
                 SpawnFoe();
             }
 
-            if (spawnPerSecond > 0)
+            if (spawnEvery > 0)
             {
-                InvokeRepeating(nameof(SpawnFoe), 0, spawnPerSecond);
+                InvokeRepeating(nameof(SpawnFoe), 0, spawnEvery);
             }
         }
 

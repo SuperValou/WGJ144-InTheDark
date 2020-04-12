@@ -113,11 +113,13 @@ namespace Assets.Scripts.NavMeshComponents.Editor
 
         static NavMeshData GetNavMeshAssetToDelete(NavMeshSurface navSurface)
         {
+#pragma warning disable 618
             var prefabType = PrefabUtility.GetPrefabType(navSurface);
             if (prefabType == PrefabType.PrefabInstance || prefabType == PrefabType.DisconnectedPrefabInstance)
             {
                 // Don't allow deleting the asset belonging to the prefab parent
                 var parentSurface = PrefabUtility.GetPrefabParent(navSurface) as NavMeshSurface;
+#pragma warning restore 618
                 if (parentSurface && navSurface.navMeshData == parentSurface.navMeshData)
                     return null;
             }

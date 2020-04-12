@@ -210,7 +210,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102032643692691900}
-  - component: {fileID: 1102032643692691901}
+  - component: {fileID: 7246862174618455003}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -234,24 +234,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!143 &1102032643692691901
-CharacterController:
+--- !u!114 &7246862174618455003
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1102032643692691902}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0.3
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e265014ef1ef1de449e779c614ea267c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  head: {fileID: 1102032643829639832}
+  body: {fileID: 1102032643692691900}
+  maxUpPitchAngle: 80
+  maxDownPitchAngle: -80
+  inputManager: {fileID: 4160428405060600264, guid: 5e98883f9f5403f4cb4bde9d95384a16,
+    type: 3}
 --- !u!1 &1102032643829639833
 GameObject:
   m_ObjectHideFlags: 0
