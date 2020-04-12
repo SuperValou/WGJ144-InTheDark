@@ -30,7 +30,7 @@ namespace Assets.Scripts.Weapons
             {
                 return;
             }
-
+            
             var foe = collision.gameObject.GetComponent<Foe>();
             if (foe != null)
             {

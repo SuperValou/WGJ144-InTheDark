@@ -59,9 +59,8 @@ namespace Assets.Scripts.Weapons
 
         private void ShootChargedProjectile()
         {
-            var projectile = Instantiate(projectilePrefab, this.transform.position, this.transform.rotation);
-            projectile.transform.localScale *= 1 + Charge * 5;
-
+            Instantiate(chargedProjectilePrefab, this.transform.position, this.transform.rotation);
+            
             //chargedCannonParticle.Play();
             //chargedParticle.transform.DOScale(0, .05f).OnComplete(() => chargedParticle.Clear());
             //lineParticles.Stop();

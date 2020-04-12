@@ -43,7 +43,7 @@ namespace Assets.Scripts.Foes
                 for (int i = 0; i < meshRenderer.materials.Length; i++)
                 {
                     meshRenderer.materials[i] = hitMaterial;
-                    Debug.Log($"{meshRenderer.gameObject.name} - material {i} : {meshRenderer.materials[i].name}");
+                    //Debug.Log($"{meshRenderer.gameObject.name} - material {i} : {meshRenderer.materials[i].name}");
                 }
             }
 
