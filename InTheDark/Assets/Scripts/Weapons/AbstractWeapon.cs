@@ -9,9 +9,4 @@ namespace Assets.Scripts.Weapons
         public abstract void Fire();
         public abstract void ReleaseFire();
     }
-
-    public enum WeaponName
-    {
-        Gun
-    }
 }

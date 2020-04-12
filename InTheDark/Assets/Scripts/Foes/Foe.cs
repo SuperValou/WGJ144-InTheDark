@@ -1,7 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Utilities;
 using UnityEngine;
+using UnityEngine.AI;
 
 namespace Assets.Scripts.Foes
 {
@@ -12,6 +14,9 @@ namespace Assets.Scripts.Foes
         
         private MeshRenderer[] _renderers;
         private Material[] _materials;
+
+        private NavMeshAgent _navMeshAgent;
+
 
         public float CurrentHealth { get; private set; }
 
@@ -31,8 +36,11 @@ namespace Assets.Scripts.Foes
                 _materials[index] = material;
                 index++;
             }
-        }
 
+            _navMeshAgent = this.GetOrThrow<NavMeshAgent>();
+            _navMeshAgent.SetDestination(Vector3.zero);
+        }
+        
         public void TakeDamage(float damages)
         {
             CurrentHealth -= damages;

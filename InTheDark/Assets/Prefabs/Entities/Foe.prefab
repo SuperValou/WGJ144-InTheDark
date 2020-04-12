@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2125272977003861274}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: WeakPoints
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,8 +23,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3399156921776457096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.00000015250338, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3922206248793651087}
@@ -33,7 +33,7 @@ Transform:
   - {fileID: 2533720978827804963}
   m_Father: {fileID: 5900599368649118220}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &5219241506513646583
 GameObject:
   m_ObjectHideFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 8041387959032469680}
   - component: {fileID: 7447370560393376526}
   - component: {fileID: 1449664560871902549}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: engine_intakeArrow_35
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 1538639028199986475}
   - component: {fileID: 3378744851501288603}
   - component: {fileID: 1974323227918415371}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: cylinder_full_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 7406187341298436458}
   - component: {fileID: 6753672527402635902}
   - component: {fileID: 8738711755064105833}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: engine_plane_34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 7623002219317901442}
   - component: {fileID: 2490568767477682991}
   - component: {fileID: 3302403323376223434}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sphere_dome_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ GameObject:
   - component: {fileID: 2533720978827804963}
   - component: {fileID: 5953229707549222415}
   - component: {fileID: 3090442105663102705}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: sphere_dome_33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -442,7 +442,8 @@ GameObject:
   - component: {fileID: 6797926320330757591}
   - component: {fileID: 5369081946205182601}
   - component: {fileID: 465469641588537603}
-  m_Layer: 0
+  - component: {fileID: 1000306659715048264}
+  m_Layer: 9
   m_Name: Foe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -536,6 +537,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 6.47, y: 10, z: 22.59}
   m_Center: {x: -7.11, y: 14.17, z: -4.17}
+--- !u!195 &1000306659715048264
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7473857739717828639}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &7679310785477071886
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +570,7 @@ GameObject:
   - component: {fileID: 1159159492708488055}
   - component: {fileID: 7627804622662595464}
   - component: {fileID: 88043455675761359}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: engine_intakeArrow_21
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -627,7 +650,7 @@ GameObject:
   - component: {fileID: 3922206248793651087}
   - component: {fileID: 184097559826931913}
   - component: {fileID: 3696482354451879433}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: engine_large_24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -707,7 +730,7 @@ GameObject:
   - component: {fileID: 4620401668746387269}
   - component: {fileID: 1904672685139718362}
   - component: {fileID: 6335104293661057360}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: engine_plane_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -786,7 +809,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6620289792312753545}
   - component: {fileID: 5313512400185949593}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,7 +824,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8441738821435139752}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 22.63, z: -5.91}
+  m_LocalPosition: {x: 0, y: 22.63, z: 5.4}
   m_LocalScale: {x: 10.234328, y: 10.234328, z: 10.234328}
   m_Children: []
   m_Father: {fileID: 5900599368649118220}
@@ -876,7 +899,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8351519316065175250}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shields
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,8 +913,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8637289072378228443}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 19.616972, y: 6.08274, z: 39.497955}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: -20.898027, y: 6.08274, z: -37.9}
   m_LocalScale: {x: 10.234328, y: 10.234328, z: 10.234328}
   m_Children:
   - {fileID: 1159159492708488055}
@@ -900,4 +923,4 @@ Transform:
   - {fileID: 7406187341298436458}
   m_Father: {fileID: 5900599368649118220}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
