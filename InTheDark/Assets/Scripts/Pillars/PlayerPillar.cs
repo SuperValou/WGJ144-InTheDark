@@ -1,5 +1,7 @@
 ﻿using Assets.Scripts.Foes;
+using Assets.Scripts.Menus;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts.Pillars
 {
@@ -27,7 +29,7 @@ namespace Assets.Scripts.Pillars
 
             attackingFoe.Kill();
 
-            Debug.Log("Game over");
+            SceneManager.LoadScene(SceneIndexes.TitleScreenSceneIndex);
         }
     }
 }
