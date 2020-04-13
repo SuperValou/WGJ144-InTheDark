@@ -480,6 +480,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 1
+  deathAnimation: {fileID: 8379618022384908637, guid: 05e49253af24a4547a7b19ce1332c3ee,
+    type: 3}
 --- !u!54 &3961410116952852856
 Rigidbody:
   m_ObjectHideFlags: 0

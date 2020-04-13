@@ -10,7 +10,9 @@ namespace Assets.Scripts.Foes
     public class Foe : MonoBehaviour
     {
         public float maxHealth = 20;
-        
+
+        public GameObject deathAnimation;
+
         private NavMeshAgent _navMeshAgent;
         
         public float CurrentHealth { get; private set; }
@@ -37,6 +39,7 @@ namespace Assets.Scripts.Foes
 
         private void Die()
         {
+            Instantiate(deathAnimation, this.transform.position, this.transform.rotation);
             Destroy(gameObject);
         }
 
