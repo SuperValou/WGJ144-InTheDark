@@ -24,7 +24,10 @@ namespace Assets.Scripts.Foes
             CurrentHealth = maxHealth;
             
             _navMeshAgent = this.GetOrThrow<NavMeshAgent>();
-            _navMeshAgent.SetDestination(Vector3.zero);
+            if (_navMeshAgent.enabled)
+            {
+                _navMeshAgent.SetDestination(Vector3.zero);
+            }
         }
         
         public void TakeDamage(float damages)
