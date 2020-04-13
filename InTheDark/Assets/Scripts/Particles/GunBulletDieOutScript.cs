@@ -8,9 +8,9 @@ namespace Assets.Scripts.Particles
     public class GunBulletDieOutScript : ProjectileImpactScript
     {
         public float attenuationTime = 3;
-
+        
         private MeshRenderer _renderer;
-
+        
         void Awake()
         {
             _renderer = this.GetOrThrow<MeshRenderer>();

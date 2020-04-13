@@ -32,7 +32,6 @@ namespace Assets.Scripts.Weapons
 
         [Header("Sounds")]
         public AudioClip _shotSound;
-        public AudioClip _chargeCycleSound;
         public AudioClip _chargedShotSound;
 
         // ---
@@ -71,8 +70,6 @@ namespace Assets.Scripts.Weapons
 
             _chargeAnimationObject = Instantiate(chargeAnimationPrefab, this.transform.position, this.transform.rotation);
             _chargeAnimationObject.transform.SetParent(this.transform);
-
-            _audioSource.PlayOneShot(_chargeCycleSound);
         }
 
         public override void ReleaseFire()

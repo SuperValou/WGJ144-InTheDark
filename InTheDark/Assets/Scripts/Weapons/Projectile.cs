@@ -24,7 +24,7 @@ namespace Assets.Scripts.Weapons
         {
             _rigidbody = this.GetOrThrow<Rigidbody>();
             _rigidbody.AddForce(_rigidbody.transform.forward * speed, ForceMode.Impulse);
-
+            
             Invoke(nameof(DieOut), lifetime);
         }
         

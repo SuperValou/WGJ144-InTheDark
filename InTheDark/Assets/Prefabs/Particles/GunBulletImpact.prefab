@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 425175567865277204}
   - component: {fileID: 8098680863679713463}
   - component: {fileID: 4619650737444040724}
-  - component: {fileID: 6499983491312331428}
+  - component: {fileID: 5186000435958783422}
   m_Layer: 0
   m_Name: GunBulletImpact
   m_TagString: Untagged
@@ -4883,7 +4883,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!82 &6499983491312331428
+--- !u!82 &5186000435958783422
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4939,7 +4939,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

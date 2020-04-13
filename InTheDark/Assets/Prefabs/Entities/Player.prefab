@@ -343,7 +343,6 @@ MonoBehaviour:
   chargeAnimationPrefab: {fileID: 2671722285859205778, guid: 48ab0946b33b86c419c4760a6791c7f7,
     type: 3}
   _shotSound: {fileID: 8300000, guid: 85997c9555b0e0146ae4d83460162c16, type: 3}
-  _chargeCycleSound: {fileID: 8300000, guid: 3ec34a1be9437b2448647accb197c4c0, type: 3}
   _chargedShotSound: {fileID: 8300000, guid: c70bc49a17ced6e479e1233952d2a447, type: 3}
 --- !u!82 &1783935959441116200
 AudioSource:
@@ -401,7 +400,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
