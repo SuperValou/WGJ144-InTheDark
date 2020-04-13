@@ -168,7 +168,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feae3a967f44bb1469a8da98ab19f3c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inputManager: {fileID: 0}
+  inputManager: {fileID: 4160428405060600264, guid: 5e98883f9f5403f4cb4bde9d95384a16,
+    type: 3}
 --- !u!1 &1102032643529692888
 GameObject:
   m_ObjectHideFlags: 0
@@ -337,6 +338,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 2718679272154064452, guid: a017440a02baad745bc0f1e00b33dc11,
     type: 3}
   chargedProjectilePrefab: {fileID: 1399485563405142106, guid: 66f5ffc812df28441b090d558557be5f,
+    type: 3}
+  chargeAnimationPrefab: {fileID: 2671722285859205778, guid: 48ab0946b33b86c419c4760a6791c7f7,
     type: 3}
 --- !u!1 &1102032644324414582
 GameObject:

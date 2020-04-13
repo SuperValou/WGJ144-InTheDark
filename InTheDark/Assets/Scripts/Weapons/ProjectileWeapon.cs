@@ -25,11 +25,14 @@ namespace Assets.Scripts.Weapons
         [Header("Parts")]
         public Projectile projectilePrefab;
         public Projectile chargedProjectilePrefab;
-        
+
+        public GameObject chargeAnimationPrefab;
+
         // ---
         private float _holdTime = 0;
         private bool _isCharging = false;
         private bool _isChargeRafaleShooting = false;
+        private GameObject _chargeAnimationObject;
 
         public float Charge { get; private set; } = 0;
         
@@ -51,10 +54,8 @@ namespace Assets.Scripts.Weapons
             _holdTime = Time.time;
             _isCharging = true;
 
-            //chargingParticle.Play();
-            //lineParticles.Play();
-            //cannonModel.DOLocalMoveZ(cannonLocalPos.z - .22f, chargeTime);
-            //cannonModel.GetComponentInChildren<Renderer>().material.DOColor(finalEmissionColor, "_EmissionColor", chargeTime);
+            _chargeAnimationObject = Instantiate(chargeAnimationPrefab, this.transform.position, this.transform.rotation);
+            _chargeAnimationObject.transform.SetParent(this.transform);
         }
 
         public override void ReleaseFire()
@@ -65,6 +66,9 @@ namespace Assets.Scripts.Weapons
             }
 
             _isCharging = false;
+            Destroy(_chargeAnimationObject);
+            _chargeAnimationObject = null;
+
             if (Charge > chargeThreshold)
             {
                 _isChargeRafaleShooting = true;
@@ -78,12 +82,25 @@ namespace Assets.Scripts.Weapons
 
         private IEnumerator ShootChargedRafale()
         {
-            var wait = new WaitForSeconds(timeBetweenChargedShot);
-            int projectileCount = (int) (chargedProjectileCount * Charge);
-            for (int i = 0; i < projectileCount; i++)
+            if (Charge < 1)
             {
-                ShootChargedProjectile();
-                yield return wait;
+                var wait = new WaitForSeconds(timeBetweenChargedShot);
+                int projectileCount = (int)(chargedProjectileCount * Charge);
+                for (int i = 0; i < projectileCount; i++)
+                {
+                    ShootProjectile();
+                    yield return wait;
+                }
+            }
+            else
+            {
+                var wait = new WaitForSeconds(timeBetweenChargedShot / 2f);
+                int projectileCout = chargedProjectileCount * 2;
+                for (int j = 0; j < projectileCout; j++)
+                {
+                    ShootChargedProjectile();
+                    yield return wait;
+                }
             }
             
             Charge = 0;

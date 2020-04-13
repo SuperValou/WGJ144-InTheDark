@@ -16,7 +16,7 @@ namespace Assets.Scripts.Weapons
         public float damage = 5;
 
         public ProjectileImpactScript projectileImpactScriptPrefab;
-
+        
         // ---
         private Rigidbody _rigidbody;
         
@@ -36,7 +36,7 @@ namespace Assets.Scripts.Weapons
             }
 
             var impactInfo = collision.GetContact(0);
-            var impactPoint = impactInfo.point + impactInfo.normal * 0.01f; // avoid clipping
+            var impactPoint = impactInfo.point + impactInfo.normal * 0.001f; // avoid clipping
             var impactOrientation = Quaternion.LookRotation(-1f * impactInfo.normal);
             var impactScript = Instantiate(projectileImpactScriptPrefab, impactPoint, impactOrientation);
 
