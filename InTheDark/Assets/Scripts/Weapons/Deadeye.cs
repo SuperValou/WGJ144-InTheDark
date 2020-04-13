@@ -16,8 +16,8 @@ namespace Assets.Scripts.Weapons
         void Update()
         {
             Ray ray = eye.ViewportPointToRay(_rayVector);
-            Debug.DrawRay(ray.origin, ray.direction);
-            if (Physics.Raycast(ray, out RaycastHit raycastHit, maxDistance))
+            var layers = LayerMask.GetMask("Default", "FoeLayer", "Ground&Walls");
+            if (Physics.Raycast(ray, out RaycastHit raycastHit, maxDistance, layers))
             {
                 arm.transform.LookAt(raycastHit.point);
             }

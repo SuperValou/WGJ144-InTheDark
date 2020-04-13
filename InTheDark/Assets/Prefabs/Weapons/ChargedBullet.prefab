@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1399485563405142106}
   - component: {fileID: 3950018408342721874}
   - component: {fileID: 5963103375026546143}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ChargedBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 2239234394322638047}
   - component: {fileID: 5985824769493738611}
   - component: {fileID: 8066634804855821576}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: FireBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
