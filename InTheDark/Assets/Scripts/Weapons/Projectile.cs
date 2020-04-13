@@ -1,4 +1,5 @@
 ﻿using Assets.Scripts.Foes;
+using Assets.Scripts.Particles;
 using Assets.Scripts.Utilities;
 using UnityEngine;
 
@@ -13,7 +14,10 @@ namespace Assets.Scripts.Weapons
         public float speed = 1;
 
         public float damage = 5;
-        
+
+        public ProjectileImpactScript projectileImpactScriptPrefab;
+
+        // ---
         private Rigidbody _rigidbody;
         
         void Start()
@@ -30,22 +34,33 @@ namespace Assets.Scripts.Weapons
             {
                 return;
             }
-            
+
+            var impactInfo = collision.GetContact(0);
+            var impactPoint = impactInfo.point + impactInfo.normal * 0.01f; // avoid clipping
+            var impactOrientation = Quaternion.LookRotation(-1f * impactInfo.normal);
+            var impactScript = Instantiate(projectileImpactScriptPrefab, impactPoint, impactOrientation);
+
             var foe = collision.gameObject.GetComponent<Foe>();
             if (foe != null)
             {
                 foe.TakeDamage(damage);
+
+                impactScript.Explode();
+            }
+            else
+            {
+                impactScript.Impact();
             }
 
-            DieOut();
-            //ContactPoint contact = collision.GetContact(0);
-
-            //Quaternion rotation = Quaternion.FromToRotation(Vector3.up, contact.normal);
-            //Vector3 position = contact.point;
+            
+            Destroy(gameObject);
         }
 
         void DieOut()
         {
+            var impactScript = Instantiate(projectileImpactScriptPrefab, this.transform.position, this.transform.rotation);
+            impactScript.DieOut();
+
             if (gameObject)
             {
                 Destroy(gameObject);
