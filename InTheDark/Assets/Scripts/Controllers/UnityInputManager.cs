@@ -18,6 +18,11 @@ namespace Assets.Scripts.Controllers
             Cursor.lockState = cursorLockMode;
         }
 
+        void OnDestroy()
+        {
+            Cursor.lockState = CursorLockMode.None;
+        }
+
         public override Vector2 GetLookMovement()
         {
             float x = Input.GetAxis(MouseHorizontalAxisName) * mouseSensitivity * Time.deltaTime;

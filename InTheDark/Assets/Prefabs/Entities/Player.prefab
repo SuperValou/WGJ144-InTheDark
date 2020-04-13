@@ -330,8 +330,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weaponName: 0
   canCharge: 1
-  timeToCharge: 1
+  timeToCharge: 2
   chargeThreshold: 0.5
+  chargedProjectileCount: 15
+  timeBetweenChargedShot: 0.1
   projectilePrefab: {fileID: 2718679272154064452, guid: a017440a02baad745bc0f1e00b33dc11,
     type: 3}
   chargedProjectilePrefab: {fileID: 1399485563405142106, guid: 66f5ffc812df28441b090d558557be5f,
