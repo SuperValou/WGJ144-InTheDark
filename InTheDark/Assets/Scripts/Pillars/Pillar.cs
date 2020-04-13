@@ -10,7 +10,15 @@ namespace Assets.Scripts.Pillars
     public class Pillar : MonoBehaviour
     {
         public float explosionRadius = 20;
-        
+        public AudioClip explosionSound;
+
+        private AudioSource _audioSource;
+
+        void Start()
+        {
+            _audioSource = this.GetOrThrow<AudioSource>();
+        }
+
         void OnCollisionEnter(Collision collision)
         {
             if (collision.collider.tag != "Foe")
@@ -40,6 +48,7 @@ namespace Assets.Scripts.Pillars
                 nearbyFoe.Kill();
             }
 
+            _audioSource.PlayOneShot(explosionSound);
 
             Destroy(this.gameObject);
         }
