@@ -19,6 +19,12 @@ namespace Assets.Scripts.Menus
             SceneManager.LoadScene(SceneIndexes.MainLevelSceneIndex);
         }
 
+        public void GoToStartMenu()
+        {
+            _audioSource.Play();
+            SceneManager.LoadScene(SceneIndexes.TitleScreenSceneIndex);
+        }
+
         public void ExitGame()
         {
             _audioSource.Play();

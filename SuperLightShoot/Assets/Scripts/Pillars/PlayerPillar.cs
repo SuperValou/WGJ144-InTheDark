@@ -29,7 +29,7 @@ namespace Assets.Scripts.Pillars
 
             attackingFoe.Kill();
 
-            SceneManager.LoadScene(SceneIndexes.TitleScreenSceneIndex);
+            SceneManager.LoadScene(SceneIndexes.GameOverScreenSceneIndex);
         }
     }
 }
